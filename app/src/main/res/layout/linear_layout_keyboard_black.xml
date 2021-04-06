@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:background="@color/cardview_shadow_start_color"
+    android:background="@color/black"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical">
 
@@ -15,7 +15,7 @@
         android:background="@color/white"
         android:minHeight="@dimen/text_view_size" />
 
-   <TextView
+    <TextView
         android:id="@+id/operationTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -173,6 +173,7 @@
             android:text="@string/divide" />
 
     </LinearLayout>
+
 
 
 </LinearLayout>

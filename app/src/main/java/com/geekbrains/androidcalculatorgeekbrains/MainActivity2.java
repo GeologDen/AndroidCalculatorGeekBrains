@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     TextView resultTextView; // вывод результата
     TextView operationTextView; // вывод знака операции
@@ -70,16 +70,13 @@ public class MainActivity extends AppCompatActivity {
         String op = button.getText().toString();
         String number = numberEditText.getText().toString();
 
-
         if (number.length() > 0) {
-
             number = number.replace(',', '.');
             try {
                 performOperation(Double.valueOf(number), op);
             } catch (NumberFormatException ex) {
                 numberEditText.setText("");
             }
-
         }
         lastOperation = op;
         operationTextView.setText(lastOperation);
@@ -115,8 +112,8 @@ public class MainActivity extends AppCompatActivity {
                     operand -= number;
                     break;
                 case "CHNG":
-                    Intent runActivity2 = new Intent(MainActivity.this,MainActivity2.class);
-                    startActivity(runActivity2);
+                    Intent runActivity = new Intent(MainActivity2.this,MainActivity.class);
+                    startActivity(runActivity);
                     break;
 
             }
